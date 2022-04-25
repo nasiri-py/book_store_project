@@ -1,14 +1,14 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .forms import CustomUserCreationForm, CostomUserChangeForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import CustomUser
 
 
 # @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
-    form = CostomUserChangeForm
+    form = CustomUserChangeForm
     model = CustomUser
     list_display = ['username', 'email', 'age', 'is_staff']
     fieldsets = UserAdmin.fieldsets + (
