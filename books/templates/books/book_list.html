@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block page_title %}Book List{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        {% for book in books %}
+            <div class="container mt-2">
+                <h2>{{ book.title }}</h2>
+                <h5>{{ book.author }}</h5>
+                <p>{{ book.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
