@@ -1,12 +1,14 @@
 {% extends '_base.html' %}
 
+{% load book_tags %}
+
 {% block page_title %}{{ book.title }}{% endblock %}
 
 {% block content %}
     <div class="container mt-3">
         <h2>{{ book.title|title }}</h2>
         <h5>{{ book.author }}</h5>
-        <p>{{ book.description|linebreaks }}</p>
+        <p>{{ book.description|to_lowercase:'HELLO'|linebreaks }}</p>
         <p>{{ book.price }}</p>
         <br>
         <a class="btn" href="{% url 'book_update' book.id %}">ویرایش</a> | <a class="btn" href="{% url 'book_delete' book.id %}">حذف</a>
