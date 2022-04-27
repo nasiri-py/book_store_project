@@ -6,9 +6,9 @@
     <div class="container mt-3">
         {% for book in books %}
             <div class="container mt-2">
-                <h2>{{ book.title }}</h2>
+                <h2>{{ book.title|capfirst }}</h2>
                 <h5>{{ book.author }}</h5>
-                <p>{{ book.description }}</p>
+                <p>{{ book.description|truncatewords:15 }}</p>
                 <a class="btn btn-success" href="{{ book.get_absolute_url }}">مشاهده</a>
                 <br>
             </div>

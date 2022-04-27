@@ -4,9 +4,9 @@
 
 {% block content %}
     <div class="container mt-3">
-        <h2>{{ book.title }}</h2>
+        <h2>{{ book.title|title }}</h2>
         <h5>{{ book.author }}</h5>
-        <p>{{ book.description }}</p>
+        <p>{{ book.description|linebreaks }}</p>
         <p>{{ book.price }}</p>
         <br>
         <a class="btn" href="{% url 'book_update' book.id %}">ویرایش</a> | <a class="btn" href="{% url 'book_delete' book.id %}">حذف</a>
