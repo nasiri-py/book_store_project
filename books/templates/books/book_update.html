@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_title %} ویرایش {{ book.title }}{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h2>Add Book</h2>
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-success mt-3">ویرایش</button>
+        </form>
+    </div>
+{% endblock %}
