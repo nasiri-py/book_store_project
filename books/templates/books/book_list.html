@@ -9,6 +9,8 @@
                 <h2>{{ book.title }}</h2>
                 <h5>{{ book.author }}</h5>
                 <p>{{ book.description }}</p>
+                <a class="btn btn-success" href="{{ book.get_absolute_url }}">مشاهده</a>
+                <br>
             </div>
         {% endfor %}
     </div>
