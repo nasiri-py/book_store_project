@@ -6,7 +6,7 @@
 {% block page_title %}Sign Up{% endblock %}
 
 {% block styles %}
-        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -17,9 +17,6 @@
                 <h1 class="text-center">ثبت نام</h1>
                 {{ form|crispy }}
                 <div class="d-flex justify-content-between align-items-center">
-                    <div class="mt-2">
-                        <a class="text-decoration-none" href="{% url 'password_reset' %}">فراموشی رمز عبور</a>
-                    </div>
                 </div>
                 <button type="submit" class="btn btn-success mt-3 w-100">ثبت نام</button>
                 <div class="line-with-middle-sep">

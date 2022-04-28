@@ -4,9 +4,9 @@
 
 {% block content %}
     <div class="container mt-3">
-        <h2>Delete {{ book.title }}</h2>
-        <h5>Are you sure to delete {{ book.title }} book?</h5>
-        <button type="submit" class="btn btn-danger mt-3">Yes, delete</button>
-        <a class="btn btn-outline-danger mt-3" href="{{ book.get_absolute_url }}">No</a>
+        <h2>حذف کتاب <a href="{{ book.get_absolute_url }}" class="text-decoration-none">{{ book.title }}</a></h2>
+        <h5>آیا مطمئن هستید که میخواهید کتاب "{{ book.title }}" راحذف کنید؟</h5>
+        <button type="submit" class="btn btn-danger mt-3">بله، مطمئنم</button>
+        <a class="btn btn-outline-danger mt-3" href="{{ book.get_absolute_url }}">خیر</a>
     </div>
 {% endblock %}

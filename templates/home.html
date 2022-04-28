@@ -3,12 +3,14 @@
 {% block page_title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Home Page</h1>
-    {% if user.is_authenticated %}
-        <p>Welcome {{ user.username }} | <a href="{% url 'logout' %}">Log Out</a></p>
-    {% else %}
-    <a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">SignUp</a>
-    {% endif %}
-    <a href="{% url 'book_list' %}">لیست کتابها</a>
+    <div class="container mt-4" dir="rtl">
+        <h1>صفحه خانه</h1>
+        {% if user.is_authenticated %}
+            <p class="mt-5">خوش آمدی {{ user.username }} | <a class="text-decoration-none" href="{% url 'logout' %}">خروج</a></p>
+        {% else %}
+            <p class="mt-5"><a class="text-decoration-none" href="{% url 'login' %}">ورود</a> | <a class="text-decoration-none" href="{% url 'signup' %}">ثبت نام</a></p>
+        {% endif %}
+    <p>جهت مشاهده کتابها به صفحه <a class="mt-3 text-decoration-none" href="{% url 'book_list' %}">لیست کتابها</a> بروید</p>
+    </div>
 {% endblock %}
 

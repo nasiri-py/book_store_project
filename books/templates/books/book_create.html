@@ -9,19 +9,11 @@
         <div class="row">
             <div class="col-9">
                 <div class="card shadow my-3">
-                    <h5 class="card-header bg-success text-light px-5">فرم</h5>
+                    <h5 class="card-header bg-success text-light px-5">افزودن کتاب</h5>
                     <div class="px-5 pt-3 pb-5">
-                        <form method="POST">
+                        <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-{#                            <div class="form-group py-2">#}
-{#                                <label class="py-1">عنوان کتاب:</label>#}
-{#                                <input type="text" class="form-control" placeholder="" name="title">#}
-{#                            </div>#}
-{#                            <div class="form-group py-2">#}
-{#                                <label class="py-1">توضیحات کتاب:</label>#}
-{#                                <textarea class="form-control" name="text" rows="8" placeholder=""></textarea>#}
-{#                            </div>#}
-                                {{ form|crispy }}
+                            {{ form|crispy }}
                             <button type="submit" class="btn btn-success mt-2">ذخیره</button>
                         </form>
                     </div>
